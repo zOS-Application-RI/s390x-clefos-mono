@@ -1,4 +1,4 @@
-FROM docker.io/s390x/clefos:latest
+FROM docker.io/clefos:latest
 
 # #Update OS Packages
 RUN  rpmkeys --import "http://pool.sks-keyservers.net/pks/lookup?op=get&search=0x3fa7e0328081bff6a14da29aa6a19b38d3d831ef"
