@@ -13,5 +13,9 @@ deploy:
   on:
     branch: master  
 notifications:
-  slack: gbs-cai:8YOiAOuRbt0a2y5He5gkLfWb
-    
+  slack: 
+    rooms:
+    - gbs-cai:8YOiAOuRbt0a2y5He5gkLfWb
+    template:
+        - "Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository_slug}@%{branch} by %{author} %{result} in %{duration}"
+        - "Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository_slug}@%{branch} in PR <%{pull_request_url}|#%{pull_request_number}> by %{author} %{result} in %{duration}"
