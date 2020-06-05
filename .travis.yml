@@ -7,4 +7,5 @@ script:
   - docker push 
 notifications:
   email:
-    - ashissah@in.ibm.com
+      - ashissah@in.ibm.com
+      
