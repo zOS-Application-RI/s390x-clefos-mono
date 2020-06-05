@@ -7,3 +7,9 @@ RUN yum install mono-devel -y
 
 #Testing -1 
 RUN csharp -e 'new System.Net.WebClient ().DownloadString ("https://www.nuget.org")'
+
+#Testing -2
+RUN mkdir -p scripts
+ADD hello.cs scripts/hello.cs
+RUN mcs scripts/hello.cs
+RUN mono scripts/hello.exe
