@@ -22,5 +22,5 @@ CMD         ["/usr/sbin/init"]
 
 #RUN yum remove -y gunzip gzip zcat 
 #RUN yum check-update
-RUN yum install -y applydeltarpm
-RUN yum upgrade -y 
+RUN sudo yum install deltarpm
+RUN sudo yum upgrade -y 
