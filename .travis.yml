@@ -2,7 +2,8 @@ arch: s390x
 services:
 - docker
 script: 
-  - docker build -f Dockerfile .
-after_script:  
+  - docker build -t s390x-clefos-mono -f Dockerfile .
+after_script:
+  - docker tag  s390x-clefos-mono  "$DOCKER_USERNAME"/s390x-clefos-mono:latest
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin    
   - docker push "$DOCKER_USERNAME"/s390x-clefos-mono:latest
