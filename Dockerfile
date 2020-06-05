@@ -20,6 +20,6 @@ VOLUME         ["/sys/fs/cgroup"]
 
 CMD         ["/usr/sbin/init"]
 
-RUN yum remove -y gunzip gzip zcat 
+#RUN yum remove -y gunzip gzip zcat 
 RUN yum clean packages && yum check-update
 RUN yum upgrade -y 
