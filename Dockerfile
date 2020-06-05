@@ -6,4 +6,4 @@ RUN  su -c 'curl https://download.mono-project.com/repo/centos7-stable.repo | te
 RUN yum install mono-devel -y
 
 #Testing -1 
-CMD [ "csharp -e 'new System.Net.WebClient ().DownloadString ("https://www.nuget.org")'" ]
+RUN csharp -e 'new System.Net.WebClient ().DownloadString ("https://www.nuget.org")'
