@@ -1,7 +1,7 @@
-FROM docker.io/s390x/clefos:latest
+FROM docker.io/clefos
 
 # #Update OS Packages
-RUN yum remove gzip-1.10-3.68.el7.s390x
+# RUN yum remove gzip-1.10-3.68.el7.s390x
 
 # ENV         container docker
 RUN yum update -y --assumeyes --skip-broken && \
