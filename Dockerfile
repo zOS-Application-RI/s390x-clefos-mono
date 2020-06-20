@@ -14,10 +14,10 @@ ADD hello.cs scripts/hello.cs
 RUN mcs scripts/hello.cs
 RUN mono scripts/hello.exe
 
-RUN mkdir -p app
-ADD samp.aspx app/samp.aspx
 
+VOLUME /app
 WORKDIR /app
+ADD samp.aspx app/samp.aspx
 
 EXPOSE 9090
 ENTRYPOINT [ "xsp4","--port","9090","--nonstop"]
