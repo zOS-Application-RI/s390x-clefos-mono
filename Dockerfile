@@ -16,8 +16,8 @@ RUN mono scripts/hello.exe
 
 
 VOLUME /app
-WORKDIR /app
-ADD samp.aspx app/samp.aspx
+WORKDIR /usr/lib/xsp/test
+#ADD samp.aspx app/samp.aspx
 
 EXPOSE 9090
 ENTRYPOINT [ "xsp4","--port","9090","--nonstop"]
