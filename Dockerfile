@@ -16,7 +16,7 @@ RUN mono scripts/hello.exe
 
 
 VOLUME /app
-#WORKDIR /usr/lib/xsp/test
+WORKDIR /usr/lib/xsp/test
 #ADD samp.aspx app/samp.aspx
 
 EXPOSE 9090
